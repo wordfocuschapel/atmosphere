@@ -3,13 +3,13 @@
 <%= link_to "Delete Topic", topic_path(@topic), method: :delete, 
   data: { confirm: "Are you sure you want to delete this topic?" } %>
 <%= link_to "Add Scripture", new_topic_scripture_path(@topic)  %>
-<ul id='scriptures'>
+<ul id='scriptures' style="list-style: none;">
   <% @topic.scriptures.each do |scripture| %>
-    <li>
+   <i><li>
       #<%= scripture.id %> - 
        <%= link_to scripture.chapterverse, [@topic, scripture] %>
        Tags: <%= raw scripture.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
-    </li>
+    </li></i>
   <% end %>
 </ul>
 <%= link_to "Add Scripture", new_topic_scripture_path(@topic)  %>
