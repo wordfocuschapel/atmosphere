@@ -6,6 +6,9 @@ class ScripturesController < ApplicationController
     @scripture = @topic.scriptures.build
   end
 
+  def edit
+  end
+  
   def create
     @scripture = @topic.scriptures.build(scripture_params)
     if @scripture.save
@@ -15,6 +18,23 @@ class ScripturesController < ApplicationController
       flash[:alert] = "Scripture has not been added."
       render "new"
     end
+  end
+
+  def update
+    if @scripture.update(scripture_params)
+      flash[:notice] = "Scripture has been updated."
+      redirect_to [@topic, @scripture]
+    else
+      flash[:alert] = "Scripture has not been updated.
+
+      render action: "edit"
+    end
+  end
+
+  def destroy
+    @scripture.destroy
+    flash[:notice] = "Scripture has been removed."  
+    redirect_to @topic
   end
 
   private
