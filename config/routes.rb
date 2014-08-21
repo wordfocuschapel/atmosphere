@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'users/create'
 
   get 'users/show'
-
+  get '/signin', to: "sessions#new"
+  post '/signin', to: "sessions#create"
   root 'demopages#home'
   resources :users  
   resources :topics do   
