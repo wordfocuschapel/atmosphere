@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   
   root 'demopages#home'
   
-  resources :topics   
+  resources :topics do   
+    resources :scriptures  
+  end 
   
   resources :demopages do
   	collection do

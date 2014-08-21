@@ -1,0 +1,23 @@
+<%= form_for [@topic, @scripture] do |f| %>
+  <% if @scripture.errors.any? %>
+    <div id="error_explanation">
+    <h2><%= pluralize(@scripture.errors.count, "error") %>
+      prohibited this scripture from being saved:</h2>
+
+    <ul>
+    <% @scripture.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+  
+  <p>
+    <%= f.label :chapterverse %><br>
+    <%= f.text_field :chapterverse %>
+  </p>
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+  <%= f.submit %>
+<% end %>

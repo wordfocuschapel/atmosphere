@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821022402) do
+ActiveRecord::Schema.define(version: 20140821041208) do
+
+  create_table "scriptures", force: true do |t|
+    t.string   "chapterverse"
+    t.text     "text"
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "scriptures", ["topic_id"], name: "index_scriptures_on_topic_id"
 
   create_table "topics", force: true do |t|
     t.string   "title"
