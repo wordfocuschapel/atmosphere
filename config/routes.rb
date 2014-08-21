@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/show'
+
   root 'demopages#home'
-  
+  resources :users  
   resources :topics do   
     resources :scriptures  
   end 
-
   get 'tags/:tag', to: 'topics#index', as: :tag
   
   resources :demopages do
