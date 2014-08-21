@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= jquery.countdown.js
 //= require_tree .
 
 $(document).foundation();

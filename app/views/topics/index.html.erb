@@ -1,0 +1,8 @@
+<h2>Topics of Interest</h2>
+<%= link_to "New Topic", new_topic_path %>
+<ul>
+  <% @topics.each do |topic| %>
+    <li><%= link_to topic.title, topic %></li>
+  <% end %>
+</ul>
+<%= link_to "New Topic", new_topic_path %>

@@ -1,7 +1,21 @@
 Rails.application.routes.draw do
-  root 'static#home'
-
-  get 'static/help'
+  
+  root 'demopages#home'
+  
+  resources :topics   
+  
+  resources :demopages do
+  	collection do
+  		match 'about', to: 'demopages#about', as: 'about', via: 'get'
+  		match 'contact', to: 'demopages#contact', as: 'contact', via: 'get'
+  		match 'resources', to: 'demopages#resources', as: 'resources', via: 'get'
+  		match 'livestreaming', to: 'demopages#livestream', as: 'livestream', via: 'get'
+  		match 'ministries', to: 'demopages#ministries', as: 'ministries', via: 'get'
+  		match 'events', to: 'demopages#events', as: 'events', via: 'get'
+  		match 'donate', to: 'demopages#donate', as: 'donate', via: 'get'
+  		match 'library', to: 'demopages#library', as: 'library', via: 'get'
+  	end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
