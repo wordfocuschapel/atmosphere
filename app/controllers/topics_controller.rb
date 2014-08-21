@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
-before_action :set_topic, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_admin!, except: [:index, :show]
+  before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def index
     if params[:tag] 
@@ -66,4 +67,13 @@ before_action :set_topic, only: [:show, :edit, :update, :destroy]
     def topic_params
       params.require(:topic).permit(:title, :tag_list)
     end
-end
+
+    def authorize_admin!
+      require_signin!
+     
+      unless current_user.admin?
+        flash[:alert] = "You must be an admin to do that."
+        redirect_to topics_path
+      end
+    end
+end 
