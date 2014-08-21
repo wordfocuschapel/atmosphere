@@ -10,7 +10,10 @@
     <% end %>
     </ul>
   <% end %>
-  
+  <div class="field">
+    <%= f.label :tag_list, "Tags (seperated by commas)" %><br />
+    <%= f.text_field :tag_list %>
+  </div> 
   <p>
     <%= f.label :chapterverse %><br>
     <%= f.text_field :chapterverse %>

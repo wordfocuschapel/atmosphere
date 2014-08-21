@@ -1,6 +1,6 @@
 <div id='scripture'>
   <h2><%= @scripture.chapterverse %></h2>
-  <%= link_to "Edit Scripture", [:edit, edith_topic_scripture_path(@topic, @scripture) %>
+  <%= link_to "Edit Scripture", edit_topic_scripture_path(@topic, @scripture) %>
   <%= link_to "Remove Scripture", [@topic, @scripture], method: :delete, 
     data: {confirm: "Acre you sure you want to remove this scripture?"} %>
   <%= simple_format(@scripture.text) %>

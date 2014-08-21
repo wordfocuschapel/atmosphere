@@ -12,7 +12,7 @@ class ScripturesController < ApplicationController
   def create
     @scripture = @topic.scriptures.build(scripture_params)
     if @scripture.save
-      flash[:notice] = "Scriture has been successfully added to #{@topic}."
+      flash[:notice] = "Scriture has been successfully added to #{@topic.title}."
       redirect_to [@topic, @scripture]
     else
       flash[:alert] = "Scripture has not been added."
@@ -25,7 +25,7 @@ class ScripturesController < ApplicationController
       flash[:notice] = "Scripture has been updated."
       redirect_to [@topic, @scripture]
     else
-      flash[:alert] = "Scripture has not been updated.
+      flash[:alert] = "Scripture has not been updated."
 
       render action: "edit"
     end
@@ -40,7 +40,7 @@ class ScripturesController < ApplicationController
   private
   
     def scripture_params
-      params.require(:scripture).permit(:chapterverse, :text)
+      params.require(:scripture).permit(:chapterverse, :text, :tag_list)
     end
 
    def set_topic

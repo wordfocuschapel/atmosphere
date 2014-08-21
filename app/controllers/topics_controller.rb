@@ -2,7 +2,11 @@ class TopicsController < ApplicationController
 before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def index
-    @topics = Topic.all
+    if params[:tag] 
+      @topics = Topic.tagged_with(params[:tag])  
+    else
+      @topics = Topic.all
+    end
   end
 
   def new
@@ -60,6 +64,6 @@ before_action :set_topic, only: [:show, :edit, :update, :destroy]
     end 
 
     def topic_params
-      params.require(:topic).permit(:title)
+      params.require(:topic).permit(:title, :tag_list)
     end
 end

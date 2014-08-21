@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :topics do   
     resources :scriptures  
   end 
+
+  get 'tags/:tag', to: 'topics#index', as: :tag
   
   resources :demopages do
   	collection do

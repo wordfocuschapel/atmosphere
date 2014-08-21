@@ -8,6 +8,7 @@
     <li>
       #<%= scripture.id %> - 
        <%= link_to scripture.chapterverse, [@topic, scripture] %>
+       Tags: <%= raw scripture.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
     </li>
   <% end %>
 </ul>
