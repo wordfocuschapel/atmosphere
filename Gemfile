@@ -1,7 +1,7 @@
-# <Appname> Gemfile
-# Organization:
-# Author:
-# Date:
+# Word Focus Chapel Gemfile
+# Organization: Word Focus Chapel
+# Author: Bode Fuwa
+# Date: August 2014
 
 # General
 ruby '2.1.2'

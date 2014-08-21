@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821120421) do
+ActiveRecord::Schema.define(version: 20140821124048) do
 
   create_table "scriptures", force: true do |t|
     t.string   "chapterverse"
@@ -44,6 +44,14 @@ ActiveRecord::Schema.define(version: 20140821120421) do
 
   create_table "topics", force: true do |t|
     t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
