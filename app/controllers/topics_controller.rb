@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-  before_action :authorize_admin!, except: [:index, :show]
+#  before_action :authorize_admin!, except: [:index, :show]
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   def index

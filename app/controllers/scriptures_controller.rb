@@ -1,7 +1,7 @@
 class ScripturesController < ApplicationController
   before_action :set_topic  
   before_action :set_scripture, only: [:show, :edit, :update, :destroy]
-  before_action :require_signin!, except!: [:show, :index] 
+#  before_action :require_signin!, except!: [:show, :index] 
 
   def new
     @scripture = @topic.scriptures.build
