@@ -1,6 +1,6 @@
 class Scripture < ActiveRecord::Base
   validates :chapterverse, :text, presence: true
   belongs_to :topic
-#  attr_accessible :text, :chapterverse, :tag_list
+  belongs_to :user
   acts_as_taggable
 end

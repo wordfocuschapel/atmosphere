@@ -1,6 +1,7 @@
 class ScripturesController < ApplicationController
   before_action :set_topic  
   before_action :set_scripture, only: [:show, :edit, :update, :destroy]
+  before_action :require_signin!, except!: [:show, :index] 
 
   def new
     @scripture = @topic.scriptures.build
@@ -11,7 +12,8 @@ class ScripturesController < ApplicationController
   
   def create
     @scripture = @topic.scriptures.build(scripture_params)
-    if @scripture.save
+    @scripture.user = current_user
+     if @scripture.save
       flash[:notice] = "Scriture has been successfully added to #{@topic.title}."
       redirect_to [@topic, @scripture]
     else

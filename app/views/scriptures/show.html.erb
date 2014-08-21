@@ -4,4 +4,6 @@
   <%= link_to "Remove Scripture", [@topic, @scripture], method: :delete, 
     data: {confirm: "Acre you sure you want to remove this scripture?"} %>
   <%= simple_format(@scripture.text) %>
+  <span id="addedby">Created by <%= @scripture.user.email %></span>
+
 </div>
