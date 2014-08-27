@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
   
-  get 'users/new'
+  namespace :admin do
+    resources :users
+#  get 'users/index'
+  end
+#  get 'users/index'
+#  get 'users/new'
 
-  get 'users/create'
+#  get 'users/create'
 
-  get 'users/show'
+#  get 'users/show'
   get '/signin', to: "sessions#new"
   post '/signin', to: "sessions#create"
   root 'demopages#home'
