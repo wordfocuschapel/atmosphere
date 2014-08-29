@@ -4,24 +4,25 @@
     <div class="large-3 panel columns">
       <%= image_tag("wfc125.jpg", height: 600, width: 500) %>
       <hr> 
-      <h4>Services Times</h4><hr>
+      <h5>Services Times</h5><hr>
  
       <p>
-        <strong>Sundays</strong><br>
-        9:30AM <br>
-        <strong>Wednesdays</strong><br>
-        7:00PM <br>
+        <strong>Celebration Service</strong><br>
+        Sundays <i>9:30 - 11:00AM</i> <br>
+        <strong>Midweek Service</strong><br>
+        Wednesdays <i>7:00 - 8:30PM</i> <br>
+        <strong>Prayer Meeting</strong><br>
+        Sundays <i>8:45 - 9:15AM</i><br>
         <strong>Night Vigil</strong><br> 
-        First Fridays <br>
-        10:00PM - MIDNIGHT 
-      </p><hr>
+        First Fridays <i>10:00PM - MIDNIGHT</i> 
+      </p>
  
       <div class="row">
         <div class="large-4 columns">
         
         <a href="#" data-reveal-id="firstModal" class="button [secondary success alert radius round]">Upcoming Events</a>
         <div id="firstModal" class="reveal-modal" data-reveal>
-          <h1>Join us of our inaugural service</h1>
+          <h1><small>Join us for our inaugural service Sept. 12, 2014 </small></h1>
           <%= image_tag("wfcinaguration.jpg") %>
           <a class="close-reveal-modal">&#215;</a>
         </div>
@@ -36,6 +37,19 @@
         <form>
             <input type="text" class="search-field" placeholder="Subscribe with email">
         </form>
+      </div>
+      <div>
+      	<h5>Location</h5>
+      	<hr>
+      	<p>
+      	  <ul>
+      	    <li class="fn">Word Focus Chapel</li>
+      	    <li class="street-address">13 C Street, Suite A</li>
+      	    <li class="locality">Laurel</li>
+      	    <li><span class="state">Maryland</span>, <span class="zip">20707</span></li>
+      	  </ul>
+      	</p>
+      	
       </div>
     </div>
  
@@ -54,7 +68,7 @@
     		</div>
         </div>
       </div>
-      
+      <% admins_only do %>
       <form>
               <div class="row collapse">
  
@@ -68,7 +82,7 @@
  
               </div>
       </form>
- 
+ 	 <% end %>
       <div class="row">
         <div class="large-6 columns">
           <div class="panel">

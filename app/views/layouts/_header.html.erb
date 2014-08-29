@@ -46,10 +46,12 @@
         <li class="has-dropdown">
           <%= link_to "About", '#' %>
           <ul class="dropdown">
-            <li><%= link_to "Overview", '#' %></li>
+            <li><%= link_to "Overview", about_demopages_path %></li>
             <li class="divider"></li>
             <li><label>Ministry</label></li>
+            <% admins_only do %>
             <li><%= link_to "History", '#' %></li>
+            <% end %>
             <li><%= link_to "Mission and Vision", '#' %></li>
             <li><%= link_to "Core Values and Beliefs", '#' %></li>
             <li class="divider"></li>
@@ -78,12 +80,13 @@
         
         </li>
         <li class="divider"></li>
+        <% end %>
         <li>
           <%= link_to "Contact", '#' %>
         
         </li>
         <li class="divider"></li>
-        <% end %>
+        
       </ul>    
     </section>
   </nav> 

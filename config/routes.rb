@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   		match 'events', to: 'demopages#events', as: 'events', via: 'get'
   		match 'donate', to: 'demopages#donate', as: 'donate', via: 'get'
   		match 'library', to: 'demopages#library', as: 'library', via: 'get'
+  		match 'legal', to: 'demopages#legal', as: 'legal', via: 'get'
   	end
   end
 

@@ -4,6 +4,10 @@
 
 @import "foundation_and_overrides";
 
+html {
+	overflow-y: scroll;
+}
+
 /* font awesome */
 .fa { font-family: FontAwesome }
 
@@ -11,4 +15,57 @@
 
 body {
 	padding-top: 60px
+}
+
+header {
+	background: black;
+	nav {
+		background: black;
+	}
+}
+show {
+	min-height: 100%;
+}
+.container {
+	background: #f6f6f6;
+	a {
+		color: #bf1e15;
+		&:hover {
+			color: #663e3b;
+		}
+	}
+	ul {
+		list-style: none;
+	}
+	footer {
+		background: #5a5a5a;
+		color: #858585;
+		font-size: 75%;
+		
+		ul {
+			list-style: none;
+		}
+		a {
+			color: #000000;
+			&:hover { 
+				color: #c2c2c2; 
+			}
+		}
+		hr {
+			color: #fff;
+			border-color: #fff;
+			margin: 0;
+		}
+	}
+	.panel {
+		background: none;
+		border: 0px;
+	}
+	hr {
+		color: #911710;
+		border-color: #911710;
+	}
+	.button {
+		background-color: #911710;
+	}
 }

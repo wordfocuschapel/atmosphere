@@ -1,8 +1,10 @@
-<div id='scripture'>
+<div class="show" id='scripture'>
   <h2><%= @scripture.chapterverse %></h2>
-  <%= link_to "Edit Scripture", edit_topic_scripture_path(@topic, @scripture) %>
-  <%= link_to "Remove Scripture", [@topic, @scripture], method: :delete, 
+  <% admins_only do %>
+    <%= link_to "Edit Scripture", edit_topic_scripture_path(@topic, @scripture) %>
+    <%= link_to "Remove Scripture", [@topic, @scripture], method: :delete, 
     data: {confirm: "Acre you sure you want to remove this scripture?"} %>
+  <% end %>
   <%= simple_format(@scripture.text) %>
   <span id="addedby">Created by <%= @scripture.user.email %></span>
 

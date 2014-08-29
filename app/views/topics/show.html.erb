@@ -1,8 +1,11 @@
+<div class="show">
 <h2><%= @topic.title %></h2>
+<%  admins_only do %>
 <%= link_to "Edit Topic", edit_topic_path(@topic)  %>
 <%= link_to "Delete Topic", topic_path(@topic), method: :delete, 
   data: { confirm: "Are you sure you want to delete this topic?" } %>
 <%= link_to "Add Scripture", new_topic_scripture_path(@topic)  %>
+<% end %>
 <ul id='scriptures' style="list-style: none;">
   <% @topic.scriptures.each do |scripture| %>
    <i><li>
@@ -12,4 +15,8 @@
     </li></i>
   <% end %>
 </ul>
-<%= link_to "Add Scripture", new_topic_scripture_path(@topic)  %>
+
+  <%= link_to "Add Scripture", new_topic_scripture_path(@topic)  %>
+
+<%= link_to "Back to topics", topics_path %>
+</div>

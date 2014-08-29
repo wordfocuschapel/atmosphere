@@ -1,27 +1,72 @@
 <!-- footer -->
-<footer class="row">
+<footer>
+  <div class="row">
     <div class="large-12 columns">
-      <hr/>
-      <div class="row">
-        <div class="large-6 columns">
-          <p>© Copyright <%= Date.today.year %> WORD FOCUS CHAPEL.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><%= link_to "Donate", '#' %></li>
-            <li><%= link_to "Admin", signin_path %></li>
-            <li><%= link_to "New User", new_user_path  %></li>
-          </ul>
-        </div>
-      </div>
-    </div><br>
-    <div class="large-6 small-6 columns right">
-          <form>
-            <input type="text" class="search-field" placeholder="Subscribe with email">
-          </form>
-      	</div>
-  </footer>
+	  <%= image_tag("WFClogoblknwhite.png", height: 100, width: 250) %>
+    </div>
+  </div>
+  <div class="row"> 
+    <div class="large-2 columns">
+      <ul>
+        <li><strong><%= link_to "Watch Live", '#' %></strong><hr></li>
+      </ul>
+    </div>
+    <div class="large-2 columns">
+      <ul>
+        <li><strong><%= link_to "Events", '#' %></strong><hr></li>
+        <li><%= link_to "Service Times", '#' %></li>
+        <li><%= link_to "Upcoming Events", '#' %></li>
+      </ul>
+    </div>
+    <div class="large-2 columns">
+      <ul>
+        <li><strong><%= link_to "About", '#' %></strong><hr></li>
+        <li><%= link_to "Overview", '#' %></li>
+        <li><%= link_to "Mission and Vision", '#' %></li>
+        <li><%= link_to "Core Values and Beliefs", '#' %></li>
+        <li><%= link_to "Leadership", '#' %></li>
+        <li><%= link_to "Members of the Board", '#' %></li>
+        <li><%= link_to "Accountability Board", '#' %></li>
+      </ul>
+    </div>
+    <div class="large-2 columns">
+      <ul>
+        <li><strong><%= link_to "Ministries", '#' %></strong><hr></li>
+        <li><%= link_to "Pastor Bolaji", '#'  %></li>
+        <li><%= link_to "Church Office", '#' %></li>
+        <li><%= link_to "General Inquiries", '#' %></li>
+        <li><%= link_to "Helpline", '#' %></li>
+      </ul>
+    </div>
+    <div class="large-2 columns">
+      <ul>
+        <li><strong><%= link_to "Resources", '#' %></strong><hr></li>
+        <li><%= link_to "Sermon Library", '#' %></li>
+		<li><%= link_to "Scriptures on Topics", topics_path %></li>
+		<li><%= link_to "Pastors Notes", '#' %></li>
+		<li><%= link_to "Devotionals", '#' %></li>
+		<li><%= link_to "Prayers", '#' %></li>
+		<li><%= link_to "Latest Testimonies", '#' %></li>
+      </ul>
+    </div>
+    <div class="large-2 columns">
+      <ul>
+        <li><strong><%= link_to "Contact", '#' %></strong><hr></li>
+        <% admins_only do %>
+        <li><%= link_to "Admin", signin_path %></li>
+		<li><%= link_to "New User", new_user_path  %></li>
+		<% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="row" style="background:#262626;height:50px;padding-top:15px">
+	  <div class="large-4 columns">
+	    © Copyright <%= Date.today.year %> WORD FOCUS CHAPEL 
+	  </div>
+	  <div class="large-8 columns" align="right">
+	   13 C Street, Suite A, Laurel, MD 20707 | info@wordfocuschapel.org | (301) 256-4760
+	  </div>
+	</div>
+  </div>
+</footer>
+
