@@ -10,6 +10,10 @@ namespace :db do
  	Topic.create(title: "Fruit of the womb")
  	Topic.create(title: "Home")
  	Topic.create(title: "Business")
+ 		Topic.scriptures.create(chapterverse:"Isaiah 48:17 KJV", 
+ 		text: "Thus saith the Lord, thy Redeemer, the Holy One of Israel; 
+ 		I am the Lord thy God which teacheth thee to profit, which leadeth thee by the way 
+ 		that thou shouldest go.")
  	Topic.create(title: "Finance")
  	Topic.create(title: "Decision making")
  	Topic.create(title: "wisdom")
