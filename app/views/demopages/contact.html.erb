@@ -1,6 +1,9 @@
-<% provide(:title, 'Contact') %>
+
 <%= form_for Contact.new do |f| %>
   
+ <div class="large-8 push-4">
+ 	<h1><font face="Rancho" color="#810000" size=10>More Information Coming Soon</font></h1>
+ </div> 
 <div class="row">
 <div class="large-12 columns about">
   <h2><strong>Contact Information</strong> <small>Come visit us</small></h2>
@@ -10,13 +13,23 @@
  <div class="row events">
    <div class="row">
      <div class="large-4 push-1 columns">
+       <div id="featured" data-orbit data-options="bullets:false; 
+       animation:fade; slide_number:false; timer:true; timer_speed:1000;">
        <%= image_tag("wfc102.png") %>
+       <%= image_tag("wfc122.jpg") %>
+       <%= image_tag("wfc101.png") %>
+       <%= image_tag("wfc120.png") %>
+       <%= image_tag("wfc103.png") %>
+       <%= image_tag("wfc108.png") %>
+       <%= image_tag("wfc119.png") %>
+       </div>
      </div>
      <div class="large-7 columns">
 	<div class="large-7">
-	<ul>
+	<ul><font color="#810000">
 	  <li>
-	    <i class="fa fa-building fa-2x"></i><strong>WORD FOCUS CHAPEL</strong>
+	    <i class="fa fa-building fa-2x"></i><strong>
+	     WORD FOCUS CHAPEL</strong>
 	   
 	    13 C Street, Laurel, MD 20707
 	  </li>
@@ -29,8 +42,8 @@
 	  </div>
 	  <div class="large-4">
 	  <ul>
-	  <li><i class="fa fa-facebook fa-2x"></i>Like WFC page</li>
-	  <li><i class="fa fa-twitter fa-2x"></i>Follow WFC</li>	  
+	  <li><a href="http://facebook.com/wordfocuschapel"><i class="fa fa-facebook fa-2x"></i>Like WFC page</a></li>
+	  <li><a href="http://twitter.com/wordfocuschapel"><i class="fa fa-twitter fa-2x"></i>Follow WFC</a></li></font>	  
 	</ul>
   </div>
   </div>

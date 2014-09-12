@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+
+root 'demopages#contact'
   
-resources :contacts
+ resources :contacts
 # get 'contacts/new'
 # get 'contacts/create'
 
@@ -14,30 +16,30 @@ resources :contacts
 #  get 'users/create'
 
 #  get 'users/show'
-  get '/signin', to: "sessions#new"
-  post '/signin', to: "sessions#create"
-  root 'demopages#home'
-  resources :users  
-  resources :topics do   
-    resources :scriptures  
-  end 
-  get 'tags/:tag', to: 'topics#index', as: :tag
+#  get '/signin', to: "sessions#new"
+#  post '/signin', to: "sessions#create"
+#  root 'demopages#home'
+#  resources :users  
+#  resources :topics do   
+#    resources :scriptures  
+#  end 
+#  get 'tags/:tag', to: 'topics#index', as: :tag
   
  
-  		match 'about', to: 'demopages#about', as: 'about', via: 'get'
-  		match 'contact-us', to: 'demopages#contact', as: 'contact-us', via: 'get'
-  		match 'resources', to: 'demopages#resources', as: 'resources', via: 'get'
-  		match 'livestreaming', to: 'demopages#livestream', as: 'livestream', via: 'get'
-  		match 'ministries', to: 'demopages#ministries', as: 'ministries', via: 'get'
-  		match 'events', to: 'demopages#events', as: 'events', via: 'get'
-  		match 'donate', to: 'demopages#donate', as: 'donate', via: 'get'
-  		match 'library', to: 'demopages#library', as: 'library', via: 'get'
-  		match 'legal', to: 'demopages#legal', as: 'legal', via: 'get'
+ # 		match 'about', to: 'demopages#about', as: 'about', via: 'get'
+ #  		match 'contact-us', to: 'demopages#contact', as: 'contact-us', via: 'get'
+ # 		match 'resources', to: 'demopages#resources', as: 'resources', via: 'get'
+ ## 		match 'livestreaming', to: 'demopages#livestream', as: 'livestream', via: 'get'
+  #		match 'ministries', to: 'demopages#ministries', as: 'ministries', via: 'get'
+  #		match 'events', to: 'demopages#events', as: 'events', via: 'get'
+  #		match 'donate', to: 'demopages#donate', as: 'donate', via: 'get'
+  #		match 'library', to: 'demopages#library', as: 'library', via: 'get'
+  #		match 'legal', to: 'demopages#legal', as: 'legal', via: 'get'
 
- resources :demopages do
-  	collection do
-  	end
-  end
+# resources :demopages do
+#  	collection do
+#  	end
+#  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
