@@ -1,42 +1,69 @@
 <% provide(:title, 'Contact') %>
-<div class="large-12 columns about">
-  <h2><strong>Contact Information</strong></h2>
-  <hr>
-</div>
-<!-- WFC Contact Info -->
+<%= form_for Contact.new do |f| %>
+  
 <div class="row">
-	<div class="large-3 columns">
+<div class="large-12 columns about">
+  <h2><strong>Contact Information</strong> <small>Come visit us</small></h2>
+  <hr>
+
+<!-- WFC Contact Info -->
+ <div class="row events">
+   <div class="row">
+     <div class="large-4 push-1 columns">
+       <%= image_tag("wfc102.png") %>
+     </div>
+     <div class="large-7 columns">
+	<div class="large-7">
 	<ul>
 	  <li>
-	    <i class="fa fa-building fa-2x"></i><strong>WORD FOCUS CHAPL</strong>
-	    <br>
+	    <i class="fa fa-building fa-2x"></i><strong>WORD FOCUS CHAPEL</strong>
+	   
 	    13 C Street, Laurel, MD 20707
 	  </li>
 	 <ul>
 	 </div>
-	 <div class="large-3 columns">
+	 <div class="large-4">
 	   <ul>
 	  <li><i class="fa fa-phone fa-2x"></i> (301) 256-4760</li>
 	  </ul>
 	  </div>
-	  <div class="large-3 columns">
+	  <div class="large-4">
 	  <ul>
 	  <li><i class="fa fa-facebook fa-2x"></i>Like WFC page</li>
-	  </ul>
-	  </div>
-	  <div class="large-3 columns">
-	    <ul>
 	  <li><i class="fa fa-twitter fa-2x"></i>Follow WFC</li>	  
 	</ul>
   </div>
-</div>
+  </div>
+  </div>
+  </div>
+
 <br><br>
 <!-- Join Mailing List -->
 <div class="large-12 columns about">
-  <h2><strong>Contact Word Focus Chapel</strong></h2>
+  <h2><strong>Contact Word Focus Chapel</strong> <small>Join our mailing list</small></h2>
   <hr>
-</div>
-<div class="row">
-  
-</div>
 
+<div class="row events">
+  <div class="large-6 push-2">
+    <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  </div>
+  <div class="large-6 push-2">
+  <div class="field">
+    <%= f.label 'prayer request (optional)' %><br>
+    <%= f.text_area :prayerrequest %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit 'Submit', :class => 'button' %>
+  </div>
+<% end %>
+</div>
+</div>
+<idiv>

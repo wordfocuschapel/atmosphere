@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+resources :contacts
+# get 'contacts/new'
+# get 'contacts/create'
+
   namespace :admin do
     resources :users
 #  get 'users/index'
@@ -21,7 +25,7 @@ Rails.application.routes.draw do
   
  
   		match 'about', to: 'demopages#about', as: 'about', via: 'get'
-  		match 'contact', to: 'demopages#contact', as: 'contact', via: 'get'
+  		match 'contact-us', to: 'demopages#contact', as: 'contact-us', via: 'get'
   		match 'resources', to: 'demopages#resources', as: 'resources', via: 'get'
   		match 'livestreaming', to: 'demopages#livestream', as: 'livestream', via: 'get'
   		match 'ministries', to: 'demopages#ministries', as: 'ministries', via: 'get'

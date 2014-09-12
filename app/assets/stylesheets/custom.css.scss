@@ -19,6 +19,16 @@ body {
 }
 
 header {
+	background: #fff;
+	color: black;
+	.class{
+	a {
+		background-color: #fff;
+		&:hover { color: #fff;
+			background-color: #fff; }
+	}
+	}
+	
 	.button { 
 		background-color: #fff;
 		color: darken(#ffc200, 2%);	
@@ -32,17 +42,7 @@ header {
 		font-family: 'Quicksand', serif;
 		font-weight: bold;
 	}
-	$tabbar-header-color: #fff !default;
-	/* $topbar-*/
-	background: #fff;
-	color: black;
-	nav {
-		background: #fff;
-		a {
-				&:hover { color: black; }
-				color: black;
-			}
-	}
+	
 	section {
 		background: #fff;
 	}
@@ -63,6 +63,9 @@ show {
 	min-height: 100%;
 }
 .container {
+	.button {
+		background-color: #911710;
+	}
 	font-family: 'Quicksand', serif;
 	h1, h2, h3, h4, h5, h6, p, span {
   	  font-family: 'Quicksand', serif;
@@ -118,7 +121,7 @@ show {
 		 font-weight: bold;
 		 font-family: 'Quicksand', serif;
 	}
-}
+
 
 .about {
 	h2, h3 {
@@ -140,4 +143,5 @@ show {
   		color: #810000;
   		height: 20px solid;
   	}
+}
 }

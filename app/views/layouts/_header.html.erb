@@ -6,16 +6,18 @@
       <li class="name">
         <!-- logo -->
         <%= link_to image_tag("WFC Final logo-01.png", height: 100, width: 250), root_path %> 
-        <font face="Rancho" color="#810000" size="6">Proving the validity of God's Word!</font>         		
+        <a href=<%= root_path %>>
+          <font face="Rancho" color="#810000" size="6">Proving the validity of God's Word!</font>  
+        </a>       		
       </li>
     </ul>
   </div> 
   <div class="large-9 push-3">
   	<ul class="large stack-for-small radius secondary button-group">
+  		<li><%= link_to 'HOME', root_path, class: 'button' %></li>
   		<li><%= link_to 'EVENTS', events_path, class: 'button' %></li>
   		<li><%= link_to 'ABOUT', about_path, class: 'button' %></li>
-  		<li><%= link_to 'MINISTRIES', '', class: 'button' %></li>
-  		<li><%= link_to 'CONTACT', contact_path, class: 'button' %></li>
+  		<li><%= link_to 'CONTACT', contact_us_path, class: 'button' %></li>
 	</ul>
   </div>
   </div>

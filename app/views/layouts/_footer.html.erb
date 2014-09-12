@@ -15,22 +15,33 @@
     </div>
     <div class="large-2 columns">
       <ul>
-        <li><strong><%= link_to "Events", '#' %></strong><hr></li>
-        <li><%= link_to "Service Times", '#' %></li>
-        <li><%= link_to "Upcoming Events", '#' %></li>
+        <li><strong><%= link_to "Events", events_path %></strong><hr></li>
+        <li><%= link_to "Service Times", events_path %></li>
+        <li><%= link_to "Upcoming Events", events_path %></li>
       </ul>
     </div>
     <div class="large-2 columns">
       <ul>
-        <li><strong><%= link_to "About", '#' %></strong><hr></li>
-        <li><%= link_to "Overview", '#' %></li>
-        <li><%= link_to "Mission and Vision", '#' %></li>
-        <li><%= link_to "Core Values and Beliefs", '#' %></li>
-        <li><%= link_to "Leadership", '#' %></li>
-        <li><%= link_to "Members of the Board", '#' %></li>
-        <li><%= link_to "Accountability Board", '#' %></li>
+        <li><strong><%= link_to "About", about_path %></strong><hr></li>
+        <li><%= link_to "Vision", about_path %></li>
+        <li><%= link_to "Leadership", about_path %></li>
       </ul>
     </div>
+    <div class="large-2 columns">
+      <ul>
+        <li><strong><%= link_to "Contact", contact_us_path %></strong><hr></li>
+        <li><a href="http://facebook.com/wordfocuschapel"><i class="fa fa-facebook fa-lg"></i>
+          like our page</a></li>
+        <li><a href="http://twitter.com/wordfocuschapel"><i class="fa fa-twitter fa-lg"></i>
+         follow us</a></li>
+        <li></li>
+        <% admins_only do %>
+        <li><%= link_to "Admin", signin_path %></li>
+		<li><%= link_to "New User", new_user_path  %></li>
+		<% end %>
+      </ul>
+    </div>
+    <% admins_only do %>
     <div class="large-2 columns">
       <ul>
         <li><strong><%= link_to "Ministries", '#' %></strong><hr></li>
@@ -51,18 +62,8 @@
 		<li><%= link_to "Latest Testimonies", '#' %></li>
       </ul>
     </div>
-    <div class="large-2 columns">
-      <ul>
-        <li><strong><%= link_to "Contact", '#' %></strong><hr></li>
-        <li><a href="http://facebook.com/wordfocuschapel"><i class="fa fa-facebook fa-lg"></i></a></li>
-        <li><a href="http://twitter.com/wordfocuschapel"><i class="fa fa-twitter fa-lg"></i></a></li>
-        <li></li>
-        <% admins_only do %>
-        <li><%= link_to "Admin", signin_path %></li>
-		<li><%= link_to "New User", new_user_path  %></li>
-		<% end %>
-      </ul>
-    </div>
+    <% end %>
+    
   </div>
   <div class="row contactfooter">
 	  <div class="large-4 columns">
