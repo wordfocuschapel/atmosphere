@@ -24,7 +24,8 @@ gem 'will_paginate', '3.0.4'
 # gem 'bootstrap-sass', '~> 2.3.2.0'
 # gem 'bootstrap-will_paginate', '0.0.9'
 gem 'foundation-rails'
-gem 'font-awesome-sass'
+# gem 'font-awesome-sass'
+gem 'font-awesome-rails'
 
 # Middleware and Back end
 gem 'devise'
