@@ -1,7 +1,9 @@
-# Shoprite Mall Shops Gemfile
-# Organization: Shoprite Mall Shops
+# WORD FOCUS CHAPEL, LAUREL, MD
+# Organization: WORD FOCUS CHAPEL
 # Author: Bode Fuwa
 # Date: 08/03/2014
+
+source 'https://rubygems.org'
 
 # General
 ruby '2.1.2'
