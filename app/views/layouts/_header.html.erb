@@ -1,93 +1,22 @@
 <!-- header -->
 <header>
- 	<div>
- 	 	
- 	</div>
-    <div class="large-12">
+	<div class="row">
+  <div class="large-9 push-3">
     <ul class="title-area" style="list-style: none;">  
       <li class="name">
-        
-          <!-- logo -->
-          <%= link_to image_tag("WFC Final logo-01.png", height: 100, width: 250), root_path %>
-        
+        <!-- logo -->
+        <%= link_to image_tag("WFC Final logo-01.png", height: 100, width: 250), root_path %> 
+        <font face="Rancho" color="#810000" size="6">Proving the validity of God's Word!</font>         		
       </li>
-      
     </ul>
-    </div> 
-    <nav class="top-bar sticky center" data-topbar>
-    <section class="middle tab-bar-section top-bar-section">
-      <ul class="right">      
-        <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-        <!-- input fields -->
-        <li class="has-form">
-    	<div class="row collapse">
-    	
-      	
-      	  <div">
-        	<form>
-      			<input type="text" class="search-field" placeholder="Scriptures on Topics">
-      		</form>
-      	  </div>
-    	</div>  
-    	</li>
-    	<li class="divider"></li>
-        <!-- quick links -->
-        <li><%= link_to "Watch Live", '#' %></li>
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <%= link_to "Events", '#' %>
-          <ul class="dropdown">
-            <li><%= link_to "Service Times", events_demopages_path %></li>
-            <li><%= link_to "Upcoming Events", events_demopages_path %></li>
-          </ul>
-          <li>
-        <li class="divider"></li>
-        <!-- dropdown links -->
-        <li class="has-dropdown">
-          <%= link_to "About", '#' %>
-          <ul class="dropdown">
-            <li><%= link_to "Overview", about_demopages_path %></li>
-            <li class="divider"></li>
-            <li><label>Ministry</label></li>
-            <% admins_only do %>
-            <li><%= link_to "History", '#' %></li>
-            <% end %>
-            <li><%= link_to "Mission and Vision", '#' %></li>
-            <li><%= link_to "Core Values and Beliefs", '#' %></li>
-            <li class="divider"></li>
-            <li><label>Leadership</label></li>
-            <li><%= link_to "Senior Pastors", '#' %></li>
-            <li><%= link_to "Board of Directors", '#' %></li>
-            <li><%= link_to "Accountability Board", '#' %></li>
-          </ul>
-        </li>
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <%= link_to "Resources", '#' %>
-          <ul class="dropdown">
-		  	<li><%= link_to "Sermon Library", '#' %></li>
-		  	<li><%= link_to "Scriptures on Topics", topics_path %></li>
-		  	<li><%= link_to "Pastors Notes", '#' %></li>
-		  	<li><%= link_to "Devotionals", '#' %></li>
-		  	<li><%= link_to "Prayers", '#' %></li>
-		  	<li><%= link_to "Latest Testimonies", '#' %></li>
-          </ul>  
-        </li>
-        <li class="divider"></li>
-        <% admins_only do %>
-        <li>
-          <%= link_to "Donate", '#' %>
-        
-        </li>
-        <li class="divider"></li>
-        <% end %>
-        <li>
-          <%= link_to "Contact", '#' %>
-        
-        </li>
-        <li class="divider"></li>
-        
-      </ul>    
-    </section>
-  </nav> 
+  </div> 
+  <div class="large-9 push-3">
+  	<ul class="large stack-for-small radius secondary button-group">
+  		<li><%= link_to 'EVENTS', events_path, class: 'button' %></li>
+  		<li><%= link_to 'ABOUT', about_path, class: 'button' %></li>
+  		<li><%= link_to 'MINISTRIES', '', class: 'button' %></li>
+  		<li><%= link_to 'CONTACT', contact_path, class: 'button' %></li>
+	</ul>
+  </div>
+  </div>
 </header>  

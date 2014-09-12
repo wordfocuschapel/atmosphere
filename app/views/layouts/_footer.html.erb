@@ -2,13 +2,15 @@
 <footer>
   <div class="row">
     <div class="large-12 columns">
-	  <%= image_tag("WFClogoblknwhite.png", height: 100, width: 250) %>
+	  <%= image_tag("WFC Final logo Colored Transparent-01.png", height: 100, width: 250) %>
     </div>
   </div>
   <div class="row"> 
     <div class="large-2 columns">
       <ul>
+        <% admins_only do %>
         <li><strong><%= link_to "Watch Live", '#' %></strong><hr></li>
+        <% end %>
       </ul>
     </div>
     <div class="large-2 columns">
@@ -52,6 +54,9 @@
     <div class="large-2 columns">
       <ul>
         <li><strong><%= link_to "Contact", '#' %></strong><hr></li>
+        <li><a href="http://facebook.com/wordfocuschapel"><i class="fa fa-facebook fa-lg"></i></a></li>
+        <li><a href="http://twitter.com/wordfocuschapel"><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li></li>
         <% admins_only do %>
         <li><%= link_to "Admin", signin_path %></li>
 		<li><%= link_to "New User", new_user_path  %></li>
@@ -59,12 +64,12 @@
       </ul>
     </div>
   </div>
-  <div class="row" style="background:#262626;height:50px;padding-top:15px">
+  <div class="row contactfooter">
 	  <div class="large-4 columns">
 	    © Copyright <%= Date.today.year %> WORD FOCUS CHAPEL 
 	  </div>
 	  <div class="large-8 columns" align="right">
-	   13 C Street, Suite A, Laurel, MD 20707 | info@wordfocuschapel.org | (301) 256-4760
+	   13 C Street, Suite A, Laurel, MD 20707 | wordfocuschapel@gmail.com | (301) 256-4760
 	  </div>
 	</div>
   </div>

@@ -4,6 +4,7 @@
 
 @import "foundation_and_overrides";
 
+
 html {
 	overflow-y: scroll;
 }
@@ -18,15 +19,54 @@ body {
 }
 
 header {
-	background: black;
+	.button { 
+		background-color: #fff;
+		color: darken(#ffc200, 2%);	
+		font-weight: bold;
+		font-family: 'Quicksand', serif;
+		font-size: 150%;		
+	}
+	.button:hover, .button:focus {
+		background-color: darken(#810000, 5%); 
+		color: #fff;
+		font-family: 'Quicksand', serif;
+		font-weight: bold;
+	}
+	$tabbar-header-color: #fff !default;
+	/* $topbar-*/
+	background: #fff;
+	color: black;
 	nav {
-		background: black;
+		background: #fff;
+		a {
+				&:hover { color: black; }
+				color: black;
+			}
+	}
+	section {
+		background: #fff;
+	}
+	ul {
+		background: #fff;
+		li	{
+			background: #fff;
+			color: black;
+			a {
+				&:hover { color: black; }
+				color: black;
+			}
+			
+		}
 	}
 }
 show {
 	min-height: 100%;
 }
 .container {
+	font-family: 'Quicksand', serif;
+	h1, h2, h3, h4, h5, h6, p, span {
+  	  font-family: 'Quicksand', serif;
+  	}
 	background: #f6f6f6;
 	a {
 		color: #bf1e15;
@@ -38,17 +78,18 @@ show {
 		list-style: none;
 	}
 	footer {
-		background: #5a5a5a;
-		color: #858585;
+		background: #fffdf2;
+		color: #ffc200;
 		font-size: 75%;
-		
+		font-family: 'Quicksand', serif;
 		ul {
 			list-style: none;
 		}
 		a {
-			color: #000000;
+			color: #810000;
 			&:hover { 
-				color: #c2c2c2; 
+				color: darken(#ffc200, 2%);
+				font-weight: bold;
 			}
 		}
 		hr {
@@ -57,6 +98,7 @@ show {
 			margin: 0;
 		}
 	}
+	
 	.panel {
 		background: none;
 		border: 0px;
@@ -68,4 +110,34 @@ show {
 	.button {
 		background-color: #911710;
 	}
+	.contactfooter {
+		 background: #810000;
+		 height:50px;
+		 padding-top:15px;
+		 color: darken(#ffc200, 2%);	
+		 font-weight: bold;
+		 font-family: 'Quicksand', serif;
+	}
+}
+
+.about {
+	h2, h3 {
+		color: #810000;
+	}
+}
+
+.events {
+	
+	color: darken(#ffc200, 3%);
+	font-family: 'Quicksand', serif;
+	h1, h2, h5, h6, p, span {
+  	  color: #810000;
+  	}
+  	h3, h4 {
+  	  color: darken(#ffc200, 3%);
+  	}
+  	hr {
+  		color: #810000;
+  		height: 20px solid;
+  	}
 }

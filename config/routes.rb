@@ -19,8 +19,7 @@ Rails.application.routes.draw do
   end 
   get 'tags/:tag', to: 'topics#index', as: :tag
   
-  resources :demopages do
-  	collection do
+ 
   		match 'about', to: 'demopages#about', as: 'about', via: 'get'
   		match 'contact', to: 'demopages#contact', as: 'contact', via: 'get'
   		match 'resources', to: 'demopages#resources', as: 'resources', via: 'get'
@@ -30,6 +29,9 @@ Rails.application.routes.draw do
   		match 'donate', to: 'demopages#donate', as: 'donate', via: 'get'
   		match 'library', to: 'demopages#library', as: 'library', via: 'get'
   		match 'legal', to: 'demopages#legal', as: 'legal', via: 'get'
+
+ resources :demopages do
+  	collection do
   	end
   end
 
