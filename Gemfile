@@ -26,6 +26,8 @@ gem 'mini_magick', '~> 3.5.0'
 gem 'net-ssh', '~>2.9.1'
 gem 'mysql2'
 
+gem 'font-awesome-sass'
+
 # production
 group :production do
  gem 'rails_12factor', '0.0.2'
