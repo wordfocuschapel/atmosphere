@@ -1,11 +1,11 @@
-# Word Focus Chapel Gemfile
-# Organization: Word Focus Chapel
+# Shoprite Mall Shops Gemfile
+# Organization: Shoprite Mall Shops
 # Author: Bode Fuwa
-# Date: August 2014
+# Date: 08/03/2014
 
 # General
 ruby '2.1.2'
-gem 'rails', '~> 4.1.2'
+gem 'rails', '~> 4.1.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'sprockets', '2.11.0'
 gem 'jbuilder', '~> 1.2'
@@ -17,28 +17,6 @@ gem 'sass-rails', '~> 4.0.2' # Use SCSS for stylesheets
 gem 'net-ssh', '~>2.9.1'
 gem 'will_paginate', '3.0.4'
 
-# gem 'sqlite3'
-# gem 'sass-rails', '~> 4.0.3'
-# gem 'uglifier', '>= 1.3.0'
-# gem 'coffee-rails', '~> 4.0.0'
-# gem 'jquery-rails'
-# gem 'turbolinks'
-# gem 'jbuilder', '~> 2.0'
-# gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
-# gem 'bcrypt', '~> 3.1.7'
-# gem 'bootstrap-sass', '~> 2.3.2.0'
-# gem 'sprockets', '2.11.0'
-# gem 'will_paginate', '3.0.4'
-gem 'bootstrap-will_paginate', '0.0.9'
-# gem 'activerecord-import'
-# gem 'acts-as-taggable-on'
-# gem 'foundation-rails'
-# gem 'devise'
-# gem 'carrierwave'
-# gem 'mini_magick', '~> 3.5.0'
-# gem 'net-ssh', '~>2.9.1'
-# gem 'mysql2'
 
 # App specific
 
@@ -49,11 +27,11 @@ gem 'foundation-rails'
 gem 'font-awesome-sass'
 
 # Middleware and Back end
-# gem 'devise'
-# gem 'carrierwave'
-# gem 'mini_magick', '~> 3.5.0'
-# gem 'acts-as-taggable-on'
-# # gem 'biblesearch-api', '1.1.0'
+gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick', '~> 3.5.0'
+gem 'acts-as-taggable-on'
+# gem 'biblesearch-api', '1.1.0'
 
 # production
 group :production do
@@ -67,7 +45,6 @@ end
 # development
 group :development, :test do
  gem 'sqlite3' # Use sqlite3 as the database for Active Record
- gem 'rspec-rails', '~> 2.13.1'
  gem 'capistrano', '~> 3.1.0'
  gem 'capistrano-rails', '~> 1.1.1'
  gem 'capistrano-bundler', '~> 1.1.1'
@@ -77,6 +54,7 @@ end
    
 # test
 group :test do
+ gem 'rspec-rails', '~> 2.13.1'
  gem 'selenium-webdriver', '~> 2.35.1'
  gem 'capybara', '~> 2.1.0'
  gem 'cucumber-rails', '1.4.0', :require => false
